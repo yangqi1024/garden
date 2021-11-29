@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.446875" />
+        <entry key="app/src/main/res/drawable/garden_tab_selector.xml" value="0.446875" />
+        <entry key="app/src/main/res/drawable/ic_filter_list_24dp.xml" value="0.3536458333333333" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.446875" />
+        <entry key="app/src/main/res/drawable/ic_my_garden_active.xml" value="0.446875" />
+        <entry key="app/src/main/res/drawable/ic_my_garden_inactive.xml" value="0.446875" />
+        <entry key="app/src/main/res/drawable/ic_plant_list_active.xml" value="0.446875" />
+        <entry key="app/src/main/res/drawable/ic_plant_list_inactive.xml" value="0.446875" />
+        <entry key="app/src/main/res/drawable/plant_list_tab_selector.xml" value="0.446875" />
+        <entry key="app/src/main/res/drawable/tab_icon_color_selector.xml" value="0.5796875" />
+        <entry key="app/src/main/res/layout/activity_garden.xml" value="0.2682291666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.43020833333333336" />
+        <entry key="app/src/main/res/layout/fragment_garden.xml" value="0.43072916666666666" />
+        <entry key="app/src/main/res/layout/fragment_plant_list.xml" value="0.5548717948717948" />
+        <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.43020833333333336" />
+        <entry key="app/src/main/res/layout/list_item_garden_planting.xml" value="0.43072916666666666" />
+        <entry key="app/src/main/res/layout/list_item_plant.xml" value="0.5548717948717948" />
+        <entry key="app/src/main/res/menu/menu_plant_list.xml" value="0.3375" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.446875" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

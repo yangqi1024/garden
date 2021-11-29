@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="hasPlantings"
+            type="boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/garden_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/card_side_margin"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/card_side_margin"
+            android:clipToPadding="false"
+            app:isGone="@{!hasPlantings}"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:spanCount="2"
+            tools:listitem="@layout/list_item_garden_planting" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/tip_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:isGone="@{hasPlantings}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/empty_garden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/garden_empty"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            app:layout_constraintBottom_toTopOf="@+id/add_plant"
+            app:layout_constraintLeft_toLeftOf="@+id/tip_group"
+            app:layout_constraintRight_toRightOf="@+id/tip_group"
+            app:layout_constraintTop_toTopOf="@+id/tip_group" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_plant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="?attr/colorOnPrimary"
+            android:text="@string/add_plant"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/tip_group"
+            app:layout_constraintLeft_toLeftOf="@+id/tip_group"
+            app:layout_constraintRight_toRightOf="@+id/tip_group"
+            app:layout_constraintTop_toBottomOf="@+id/empty_garden"
+            app:shapeAppearance="@style/ShapeAppearance.Garden.Button.Add"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

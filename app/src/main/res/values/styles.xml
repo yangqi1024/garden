@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Garden" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/garden_green_500</item>
+        <item name="colorOnPrimary">@color/garden_yellow_500</item>
+        <item name="colorPrimaryDark">@color/garden_green_700</item>
+        <item name="colorOnSurface">@color/garden_black</item>
+        <item name="colorAccent">@color/garden_green_700</item>
+        <item name="colorSurface">@color/garden_gray_50</item>
+        <item name="colorSecondary">@color/garden_yellow_500</item>
+        <item name="android:colorBackground">@color/garden_green_500</item>
+    </style>
+    <style name="Theme.Garden.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar"/>
+
+    <style name="Theme.Garden" parent="Base.Theme.Garden"/>
+
+    <style name="Theme.Garden.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_garden"
+    app:startDestination="@id/homeViewPagerFragment">
+
+    <fragment
+        android:id="@+id/homeViewPagerFragment"
+        android:name="cn.itpiggy.garden.HomeViewPagerFragment"
+        android:label="HomeViewPagerFragment"
+        tools:layout="@layout/fragment_view_pager">
+        <action
+            android:id="@+id/action_homeViewPagerFragment_to_plantDetailFragment"
+            app:destination="@id/plantDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/plantDetailFragment"
+        android:name="cn.itpiggy.garden.PlantDetailFragment"
+        android:label="@string/plant_details_title">
+        <action
+            android:id="@+id/action_plantDetailFragment_to_gardenFragment"
+            app:destination="@id/gardenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="plantId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/gardenFragment"
+        android:name="cn.itpiggy.garden.GardenFragment"
+        android:label="@string/plant_details_title">
+        <argument
+            android:name="plantName"
+            app:argType="string" />
+    </fragment>
+</navigation>

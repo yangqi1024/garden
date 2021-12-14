@@ -4,9 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import cn.itpiggy.garden.HomeViewPagerFragmentDirections
 import cn.itpiggy.garden.R
 import cn.itpiggy.garden.data.PlantAndGardenPlantings
 import cn.itpiggy.garden.databinding.ListItemGardenPlantingBinding
@@ -41,9 +43,12 @@ class GardenPlantingAdapter :
             }
         }
 
-        private fun navigateToPlant(plantId: String, view: View?) {
-            TODO("Not yet implemented")
-
+        private fun navigateToPlant(plantId: String, view: View) {
+            val direction =
+                HomeViewPagerFragmentDirections.actionHomeViewPagerFragmentToPlantDetailFragment(
+                    plantId
+                )
+            view.findNavController().navigate(direction)
         }
 
         fun bind(plantings: PlantAndGardenPlantings) {
@@ -62,14 +67,14 @@ private class GardenPlantDiffCallback : DiffUtil.ItemCallback<PlantAndGardenPlan
         oldItem: PlantAndGardenPlantings,
         newItem: PlantAndGardenPlantings
     ): Boolean {
-        TODO("Not yet implemented")
+        return oldItem.plant.plantId == newItem.plant.plantId
     }
 
     override fun areContentsTheSame(
         oldItem: PlantAndGardenPlantings,
         newItem: PlantAndGardenPlantings
     ): Boolean {
-        TODO("Not yet implemented")
+       return oldItem == newItem
     }
 
 }

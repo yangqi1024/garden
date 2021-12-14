@@ -12,5 +12,7 @@
 
     <dimen name="plant_item_image_height">95dp</dimen>
     <dimen name="header_margin">24dp</dimen>
-
+    <dimen name="plant_detail_app_bar_height">278dp</dimen>
+    <dimen name="fab_bottom_padding">72dp</dimen>
+    <dimen name="plant_description_min_height">555dp</dimen>
 </resources>
